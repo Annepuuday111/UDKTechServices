@@ -259,7 +259,7 @@ Create a `.env` file for environment-specific configuration:
 ```env
 VITE_APP_TITLE=UDK Tech Services
 VITE_API_URL=https://api.example.com
-VITE_CONTACT_EMAIL=contact@udktechservices.com
+VITE_CONTACT_EMAIL=udktechservices@gmail.com
 ```
 
 ---
@@ -339,7 +339,7 @@ We welcome contributions from the team! Please follow these steps:
 
 For questions, issues, or support:
 
-- 📧 **Email:** support@udktechservices.com
+- 📧 **Email:** udktechservices@gmail.com
 - 🌐 **Website:** [www.udktechservices.com](https://www.udktechservices.com)
 - 💼 **LinkedIn:** [UDK Tech Services](https://linkedin.com/company/udk-tech-services)
 
@@ -350,7 +350,7 @@ For questions, issues, or support:
 This project is **proprietary** and confidential.
 
 ```
-Copyright © 2025 UDK Tech Services. All rights reserved.
+Copyright © 2026 UDK Tech Services. All rights reserved.
 
 This software and associated documentation files are the exclusive 
 property of UDK Tech Services. Unauthorized copying, distribution, 
