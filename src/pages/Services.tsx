@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { 
-  Globe, 
-  Palette, 
-  Layers, 
+import {
+  Globe,
+  Palette,
+  Layers,
   Check,
   ArrowRight,
   Code,
@@ -13,7 +13,10 @@ import {
   Building2,
   Lightbulb,
   PenTool,
-  Brush
+  Brush,
+  Briefcase,
+  User,
+  Image,
 } from "lucide-react";
 
 const webDevServices = [
@@ -34,6 +37,48 @@ const webDevServices = [
     title: "Business Websites",
     description: "Professional business websites with content management, analytics, and lead generation capabilities.",
     features: ["CMS Integration", "Analytics Setup", "Contact Forms", "Lead Tracking"],
+  },
+];
+
+const portfolioServices = [
+  {
+    icon: User,
+    title: "Personal Portfolio",
+    description:
+      "Modern portfolio websites for developers, designers, freelancers, and professionals to showcase skills and projects.",
+    features: [
+      "Project Showcase",
+      "Skills & Resume Section",
+      "Responsive Design",
+      "Contact Integration",
+      "SEO Optimized",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Business Portfolio",
+    description:
+      "Professional portfolio websites for businesses to present services, projects, and achievements effectively.",
+    features: [
+      "Service Showcase",
+      "Project Gallery",
+      "Client Testimonials",
+      "Lead Contact Forms",
+      "Brand-focused Design",
+    ],
+  },
+  {
+    icon: Image,
+    title: "Creative Portfolio",
+    description:
+      "Visually rich portfolio designs for photographers, artists, and creators to display their work beautifully.",
+    features: [
+      "Image Galleries",
+      "Smooth Animations",
+      "Minimal Layout",
+      "Fast Loading",
+      "Mobile Optimized",
+    ],
   },
 ];
 
@@ -125,7 +170,7 @@ export default function Services() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {webDevServices.map((service) => (
-              <div 
+              <div
                 key={service.title}
                 className="bg-card rounded-2xl p-8 card-elevated"
               >
@@ -141,6 +186,58 @@ export default function Services() {
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-foreground">
+                      <Check className="w-4 h-4 text-secondary" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Design */}
+      <section id="portfolio-design" className="py-20 lg:py-28 section-light">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center">
+              <Briefcase className="w-7 h-7 text-secondary" />
+            </div>
+            <div>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                Portfolio Design
+              </h2>
+              <p className="text-muted-foreground">
+                Professional portfolios for businesses and individuals
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {portfolioServices.map((service) => (
+              <div
+                key={service.title}
+                className="bg-card rounded-2xl p-8 card-elevated"
+              >
+                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-6">
+                  <service.icon className="w-6 h-6 text-secondary" />
+                </div>
+
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                  {service.title}
+                </h3>
+
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.description}
+                </p>
+
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-sm text-foreground"
+                    >
                       <Check className="w-4 h-4 text-secondary" />
                       {feature}
                     </li>
@@ -169,7 +266,7 @@ export default function Services() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {logoServices.map((service) => (
-              <div 
+              <div
                 key={service.title}
                 className="bg-card rounded-2xl p-8 card-elevated"
               >

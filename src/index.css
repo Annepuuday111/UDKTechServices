@@ -1,9 +1,20 @@
+/* ===============================
+   GOOGLE FONTS (MUST BE FIRST)
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+
+/* ===============================
+   TAILWIND LAYERS
+================================ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
+/* ===============================
+   BASE VARIABLES (THEME TOKENS)
+================================ */
 @layer base {
   :root {
     /* UK Tech Services - Professional Corporate Theme */
@@ -16,19 +27,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 50% 10%;
 
-    /* Deep Teal/Navy - Primary brand color */
+    /* Brand Colors */
     --primary: 200 60% 18%;
     --primary-foreground: 0 0% 100%;
 
-    /* Bright Tech Blue - Secondary/Accent */
     --secondary: 210 100% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted backgrounds */
     --muted: 210 20% 94%;
     --muted-foreground: 210 20% 40%;
 
-    /* Accent - Lighter teal */
     --accent: 195 70% 92%;
     --accent-foreground: 200 60% 18%;
 
@@ -41,23 +49,13 @@
 
     --radius: 0.5rem;
 
-    /* Custom tokens for UK Tech Services */
+    /* Custom Tokens */
     --hero-gradient: linear-gradient(135deg, hsl(200 60% 18%) 0%, hsl(210 70% 25%) 50%, hsl(200 60% 22%) 100%);
     --cta-gradient: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(200 100% 45%) 100%);
     --card-shadow: 0 4px 24px -4px hsl(210 50% 10% / 0.08);
     --card-shadow-hover: 0 12px 32px -8px hsl(210 50% 10% / 0.15);
     --section-light: hsl(210 30% 97%);
     --text-gradient: linear-gradient(135deg, hsl(200 60% 18%) 0%, hsl(210 100% 40%) 100%);
-
-    /* Sidebar defaults */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -82,25 +80,12 @@
     --accent: 200 50% 20%;
     --accent-foreground: 210 20% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 210 40% 20%;
     --input: 210 40% 20%;
     --ring: 210 100% 55%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
+  /* Global Defaults */
   * {
     @apply border-border;
   }
@@ -115,7 +100,12 @@
   }
 }
 
+
+/* ===============================
+   COMPONENT UTILITIES
+================================ */
 @layer components {
+
   .hero-gradient {
     background: var(--hero-gradient);
   }
@@ -153,28 +143,28 @@
     animation: fadeIn 0.5s ease-out forwards;
   }
 
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
   .stagger-1 { animation-delay: 0.1s; }
   .stagger-2 { animation-delay: 0.2s; }
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
+}
+
+
+/* ===============================
+   KEYFRAMES (OUTSIDE LAYERS)
+================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

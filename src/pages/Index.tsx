@@ -9,7 +9,8 @@ import {
   Clock, 
   TrendingUp, 
   DollarSign,
-  ArrowRight
+  ArrowRight,
+  Briefcase
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -17,17 +18,26 @@ const services = [
   {
     icon: Globe,
     title: "Web Development",
-    description: "Custom websites and web applications built with modern technologies for optimal performance.",
+    description:
+      "Custom websites and web applications built with modern technologies for optimal performance.",
   },
   {
     icon: Palette,
     title: "Logo Design",
-    description: "Memorable brand identities that capture your company's essence and values.",
+    description:
+      "Memorable brand identities that capture your company's essence and values.",
   },
   {
     icon: Layers,
     title: "UI/UX Design",
-    description: "User-centered designs that create seamless digital experiences for your customers.",
+    description:
+      "User-centered designs that create seamless digital experiences for your customers.",
+  },
+  {
+    icon: Briefcase,
+    title: "Portfolio Design",
+    description:
+      "Professional portfolio websites for businesses and individuals to showcase projects, skills, and achievements with a modern and impactful design.",
   },
 ];
 

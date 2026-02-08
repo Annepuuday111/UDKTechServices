@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const quickLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  { name: "Portfolio", path: "/portfolio" },
+  { name: "Our Works", path: "/portfolio" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -13,7 +13,9 @@ const services = [
   { name: "Web Development", path: "/services#web-development" },
   { name: "Logo Design", path: "/services#logo-design" },
   { name: "UI/UX Design", path: "/services#ui-ux" },
+  { name: "Portfolio Design", path: "/services#portfolio-design" },
 ];
+
 
 export function Footer() {
   return (
